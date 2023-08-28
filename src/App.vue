@@ -1,17 +1,23 @@
 <script>
 import TheHeader from "./components/TheHeader.vue";
 import TheFooter from "./components/TheFooter.vue";
+import FilmList from "./components/FilmList.vue";
+
 export default {
   components: {
     TheHeader,
     TheFooter,
-  }
+    FilmList,
+}
+
 }
 </script>
 
 <template>
 <TheHeader></TheHeader>
-<main></main>
+<main>
+<FilmList></FilmList>
+</main>
 <TheFooter></TheFooter>
 </template>
 
