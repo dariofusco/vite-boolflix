@@ -15,7 +15,7 @@ export function searchFilm() {
             }
         })
         .then((response) => {
-            store.filmList.push(...response.data.results);
+            store.filmList = response.data.results;
             console.log(response.data.results);
         });
 }
