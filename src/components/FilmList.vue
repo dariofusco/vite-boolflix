@@ -15,7 +15,7 @@ export default {
 <template>
     <div class="container">
         <div class="row">
-            <div class="card bg-light m-3 p-2" style="width: 18rem;" v-for="film in store.filmList">
+            <div class="card bg-black m-3 p-2" style="width: 18rem;" v-for="film in store.filmList">
                 <img class="card-img-top" :src="`https://image.tmdb.org/t/p/w342${film.poster_path}`" alt="Card image cap">
                 <div class="card-body">
                     <ul>
@@ -33,6 +33,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
 .flag {
     width: 30px;
 }

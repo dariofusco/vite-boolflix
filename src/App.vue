@@ -23,6 +23,6 @@ export default {
 
 <style lang="scss">
 main {
-  background-color: rgb(83, 83, 83);
+  background-color: rgb(49, 49, 49);
 }
 </style>
