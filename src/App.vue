@@ -22,5 +22,7 @@ export default {
 </template>
 
 <style lang="scss">
-
+main {
+  background-color: rgb(83, 83, 83);
+}
 </style>
