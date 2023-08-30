@@ -18,4 +18,6 @@ export function searchFilm() {
             store.filmList = response.data.results;
             console.log(response.data.results);
         });
+
 }
+

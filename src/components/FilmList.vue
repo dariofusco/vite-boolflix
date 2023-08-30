@@ -7,8 +7,22 @@ export default {
         }
     },
     methods: {
-        searchFilm
-    }
+        searchFilm,
+        getFlag(language) {
+            switch (language) {
+                case "en":
+                    language = "GB";
+                    break;
+                case "ja":
+                    language = "JP";
+                    break;
+                case "zh":
+                    language = "CN";
+                    break;
+            }
+            return `https://flagsapi.com/${language.toUpperCase()}/flat/64.png`
+        },
+    },
 }
 </script>
 
@@ -21,9 +35,8 @@ export default {
                     <ul>
                         <li> Title: {{ film.title }}</li>
                         <li> Original Title: {{ film.original_title }}</li>
-                        <li> Language: <img class="flag"
-                                :src="`https://flagsapi.com/${film.original_language.toUpperCase()}/flat/64.png`">{{
-                                    film.original_language.toUpperCase() }}</li>
+                        <li> Language: <img class="flag" :src="getFlag(film.original_language)">
+                            {{ film.original_language.toUpperCase() }}</li>
                         <li> Vote: {{ Math.floor(film.vote_average / 2) }} <i class="fa-solid fa-star"></i></li>
                     </ul>
                 </div>
@@ -45,6 +58,7 @@ ul {
     ul {
         display: block;
     }
+
     .card-img-top {
         display: none;
     }
