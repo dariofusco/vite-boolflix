@@ -19,7 +19,7 @@ export default {
                 case "zh":
                     language = "CN";
                     break;
-            }
+            };
             return `https://flagsapi.com/${language.toUpperCase()}/flat/64.png`
         },
     },
@@ -37,7 +37,7 @@ export default {
                         <li> Original Title: {{ film.original_title }}</li>
                         <li> Language: <img class="flag" :src="getFlag(film.original_language)">
                             {{ film.original_language.toUpperCase() }}</li>
-                        <li> Vote: {{ Math.floor(film.vote_average / 2) }} <i class="fa-solid fa-star"></i></li>
+                        <li> Vote: <i v-for="i in Math.floor(film.vote_average / 2)" class="fa-solid fa-star"></i></li>
                     </ul>
                 </div>
             </div>
@@ -66,9 +66,11 @@ ul {
 
 .flag {
     width: 30px;
+    padding: 1px;
 }
 
 i {
     color: rgba(250, 233, 0, 0.932);
+    padding: 1px;
 }
 </style>
